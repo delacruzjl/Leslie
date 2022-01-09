@@ -9,6 +9,8 @@
   },
   "private": true,
   "dependencies": {
+    "@fluentui/react": "^8.49.0",
+    "@fluentui/react-hooks": "^8.3.9",
     "@nrwl/next": "^13.4.3",
     "core-js": "^3.6.5",
     "react": "17.0.2",
