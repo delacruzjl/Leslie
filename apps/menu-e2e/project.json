@@ -1,0 +1,28 @@
+{
+  "root": "apps/menu-e2e",
+  "sourceRoot": "apps/menu-e2e/src",
+  "projectType": "application",
+  "targets": {
+    "e2e": {
+      "executor": "@nrwl/cypress:cypress",
+      "options": {
+        "cypressConfig": "apps/menu-e2e/cypress.json",
+        "devServerTarget": "menu:storybook"
+      },
+      "configurations": {
+        "ci": {
+          "devServerTarget": "menu:storybook:ci"
+        }
+      }
+    },
+    "lint": {
+      "executor": "@nrwl/linter:eslint",
+      "outputs": ["{options.outputFile}"],
+      "options": {
+        "lintFilePatterns": ["apps/menu-e2e/**/*.{js,ts}"]
+      }
+    }
+  },
+  "tags": [],
+  "implicitDependencies": ["menu"]
+}

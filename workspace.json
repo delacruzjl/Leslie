@@ -1,0 +1,9 @@
+{
+  "version": 2,
+  "projects": {
+    "abc-tracker": "apps/abc-tracker",
+    "abc-tracker-e2e": "apps/abc-tracker-e2e",
+    "menu": "libs/menu",
+    "menu-e2e": "apps/menu-e2e"
+  }
+}

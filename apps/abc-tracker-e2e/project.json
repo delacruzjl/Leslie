@@ -1,0 +1,28 @@
+{
+  "root": "apps/abc-tracker-e2e",
+  "sourceRoot": "apps/abc-tracker-e2e/src",
+  "projectType": "application",
+  "targets": {
+    "e2e": {
+      "executor": "@nrwl/cypress:cypress",
+      "options": {
+        "cypressConfig": "apps/abc-tracker-e2e/cypress.json",
+        "devServerTarget": "abc-tracker:serve"
+      },
+      "configurations": {
+        "production": {
+          "devServerTarget": "abc-tracker:serve:production"
+        }
+      }
+    },
+    "lint": {
+      "executor": "@nrwl/linter:eslint",
+      "outputs": ["{options.outputFile}"],
+      "options": {
+        "lintFilePatterns": ["apps/abc-tracker-e2e/**/*.{js,ts}"]
+      }
+    }
+  },
+  "tags": [],
+  "implicitDependencies": ["abc-tracker"]
+}
